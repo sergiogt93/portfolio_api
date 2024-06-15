@@ -1,0 +1,6 @@
+{
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "editor.formatOnSave": true
+}

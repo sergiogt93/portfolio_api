@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  api-portfolio-dev:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile.dev
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run start:dev
+
+  api-portfolio-prod:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile.prod
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"
+    command: node dist/main
