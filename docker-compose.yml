@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: .docker/Dockerfile.dev
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=development.local
     ports:
       - "3000:3000"
     volumes:
@@ -19,7 +19,7 @@ services:
       context: .
       dockerfile: .docker/Dockerfile.prod
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=production.local
     ports:
       - "3000:3000"
     command: node dist/main
