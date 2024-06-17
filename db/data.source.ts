@@ -1,8 +1,9 @@
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ENV_PATH } from 'src/common/infraestructure/constants/cors';
 import { DataSource, DataSourceOptions } from 'typeorm';
 
 ConfigModule.forRoot({
-  envFilePath: `.env.${process.env.NODE_ENV.trim()}`,
+  envFilePath: ENV_PATH,
 });
 
 const configService = new ConfigService();

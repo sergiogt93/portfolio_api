@@ -10,11 +10,12 @@ import { SoftSkillsModule } from './soft-skills/soft-skills.module';
 import { TechnologiesModule } from './technologies/technologies.module';
 import { LinksModule } from './links/links.module';
 import { ProjectsModule } from './projects/projects.module';
+import { ENV_PATH } from './common/infraestructure/constants/cors';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: `.env.${process.env.NODE_ENV.trim()}`,
+      envFilePath: ENV_PATH,
       isGlobal: true,
     }),
     TypeOrmModule.forRoot({ ...DataSourceConfig }),
