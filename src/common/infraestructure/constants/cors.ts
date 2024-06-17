@@ -5,3 +5,5 @@ export const CORS: CorsOptions = {
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   credentials: true,
 };
+
+export const ENV_PATH = `.env.${process.env.NODE_ENV.trim()}.local`;
