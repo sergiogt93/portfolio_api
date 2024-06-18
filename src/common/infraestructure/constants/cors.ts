@@ -6,4 +6,4 @@ export const CORS: CorsOptions = {
   credentials: true,
 };
 
-export const ENV_PATH = `.env.${process.env.NODE_ENV.trim()}.local`;
+export const ENV_PATH = `.env.${process.env.NODE_ENV.trim()}`;
