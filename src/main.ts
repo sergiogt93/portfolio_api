@@ -22,6 +22,8 @@ async function bootstrap() {
   app.enableCors(CORS);
   app.setGlobalPrefix('api');
 
-  await app.listen(configService.get('PORT'));
+  await app.listen(configService.get('APP_PORT'));
+
+  console.log('Application PORT:', configService.get('APP_PORT'));
 }
 bootstrap();
